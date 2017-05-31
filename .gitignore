@@ -127,7 +127,7 @@ ENV/
 *.csv
 
 *.xls
-
+*.hdf5
 *.xlsx
 
 
@@ -137,3 +137,7 @@ ENV/
 thought/
 .thought/
 .vs/
+
+#jupyter
+
+*.ipynb
