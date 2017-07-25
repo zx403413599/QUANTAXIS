@@ -21,9 +21,13 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
+import pymongo
+import csv
+import json
+l=[]
 
-import QUANTAXIS as QA
-
-
-collection=QA.QA_Setting.client.quantaxis.backtest_history
-collection.ensure_index('cookie')
+for item in pymongo.MongoClient().quantaxis.trade_date.find():
+    l.append(item['date'])
+    #d[item['num']]=item['date']
+print(l)
+#print(d)
